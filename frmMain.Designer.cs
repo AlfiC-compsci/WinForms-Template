@@ -47,6 +47,7 @@
             this.lvReceipt.Size = new System.Drawing.Size(461, 203);
             this.lvReceipt.TabIndex = 1;
             this.lvReceipt.UseCompatibleStateImageBehavior = false;
+            this.lvReceipt.SelectedIndexChanged += new System.EventHandler(this.lvReceipt_SelectedIndexChanged);
             // 
             // frmMain
             // 

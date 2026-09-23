@@ -16,5 +16,10 @@ namespace WinForms_Template
         {
             InitializeComponent();
         }
+
+        private void frmOther_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

@@ -10,3 +10,15 @@ C:\Users\s.gilson\AppData\projects\WinForms_Template\obj\Debug\WinForms_Template
 C:\Users\s.gilson\AppData\projects\WinForms_Template\obj\Debug\WinForms_Template.exe.config
 C:\Users\s.gilson\AppData\projects\WinForms_Template\obj\Debug\WinForms_Template.frmMain.resources
 C:\Users\s.gilson\AppData\projects\WinForms_Template\obj\Debug\WinForms_Template.frmOther.resources
+C:\Users\20ACrook\AppData\Winforms\bin\Debug\WinForms_Template.exe.config
+C:\Users\20ACrook\AppData\Winforms\bin\Debug\WinForms_Template.exe
+C:\Users\20ACrook\AppData\Winforms\bin\Debug\WinForms_Template.pdb
+C:\Users\20ACrook\AppData\Winforms\obj\Debug\WinForms_Template.csproj.AssemblyReference.cache
+C:\Users\20ACrook\AppData\Winforms\obj\Debug\WinForms_Template.exe.config
+C:\Users\20ACrook\AppData\Winforms\obj\Debug\WinForms_Template.frmMain.resources
+C:\Users\20ACrook\AppData\Winforms\obj\Debug\WinForms_Template.frmOther.resources
+C:\Users\20ACrook\AppData\Winforms\obj\Debug\WinForms_Template.Properties.Resources.resources
+C:\Users\20ACrook\AppData\Winforms\obj\Debug\WinForms_Template.csproj.GenerateResource.cache
+C:\Users\20ACrook\AppData\Winforms\obj\Debug\WinForms_Template.csproj.CoreCompileInputs.cache
+C:\Users\20ACrook\AppData\Winforms\obj\Debug\WinForms_Template.exe
+C:\Users\20ACrook\AppData\Winforms\obj\Debug\WinForms_Template.pdb

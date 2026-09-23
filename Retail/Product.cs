@@ -1,4 +1,5 @@
 ﻿using System.Collections.Generic;
+using System.Windows.Forms;
 
 namespace WinForms_Template.Retail
 {
@@ -6,6 +7,17 @@ namespace WinForms_Template.Retail
     {
         public string description;
         public decimal unitPrice;
+
+        public bool isValid
+        {
+            get
+            {
+                bool returnValue = true;
+                if(description.Length < 5) { returnValue = false; }
+                if(unitPrice <= 0) { returnValue = false; }
+                return returnValue;
+            }
+        }
 
         public Product(string desc, decimal price)
         {
@@ -35,6 +47,34 @@ namespace WinForms_Template.Retail
                 { "5000000000110", new Product("Rich Tea Biscuits", 1.20m) },
                 { "5000000000127", new Product("Baked Beans", 0.90m) }
             };
+        }
+
+        public Product? GetProduct(string productCode)
+        {
+            if (data.ContainsKey(productCode))
+            {
+                return data[productCode];
+            }
+            else
+            {
+                return null;
+            }
+        }
+
+        public bool AddProduct(string productCode, Product productInfo)
+        {
+            if(productCode.Length != 13)
+            {
+                return false;
+            }
+
+            if (!productInfo.isValid)
+            {
+                return false;
+            }
+
+            data.Add(productCode, productInfo);
+            return true;
         }
     }
 }

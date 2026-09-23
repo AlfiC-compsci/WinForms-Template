@@ -19,6 +19,35 @@ namespace WinForms_Template
             lvReceipt.Columns.Add("Qnty");
             lvReceipt.Columns.Add("Total");
 
+            txtProduct.KeyDown += txtProductCode_KeyDown;
+        }
+
+
+        private void frmMain_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtProductCode_KeyDown(object sender, EventArgs e)
+        {
+            switch (e.KeyCode)
+            {
+                case Keys.Return:
+                    RecordProduct(txtproduct.Text);
+                    break;
+            }
+        }
+         
+        private void RecordProduct(string code)
+        {
+            int _quantity = 1;
+            product? _product = productList.GetProduct(code);
+            if(_product == null)
+            {
+                //Show Error
+                return;
+            }
+
             ListViewItem row1 = new ListViewItem("105");
             row1.SubItems.Add("Apples");
             row1.SubItems.Add("0.60");
@@ -26,11 +55,6 @@ namespace WinForms_Template
             row1.SubItems.Add("3.00");
 
             lvReceipt.Items.Add(row1);
-        }
-
-        private void frmMain_Load(object sender, EventArgs e)
-        {
-
         }
     }
 }
