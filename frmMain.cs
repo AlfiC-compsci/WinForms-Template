@@ -33,7 +33,7 @@ namespace WinForms_Template
             switch (e.KeyCode)
             {
                 case Keys.Return:
-                    RecordProduct(txtproduct.Text);
+                    RecordProduct(txtSomething.Text);
                     break;
             }
         }
@@ -41,7 +41,7 @@ namespace WinForms_Template
         private void RecordProduct(string code)
         {
             int _quantity = 1;
-            product? _product = productList.GetProduct(code);
+            Product? _product = productList.GetProduct(code);
             if(_product == null)
             {
                 //Show Error
@@ -55,6 +55,11 @@ namespace WinForms_Template
             row1.SubItems.Add("3.00");
 
             lvReceipt.Items.Add(row1);
+        }
+
+        private void frmMain_Load_1(object sender, EventArgs e)
+        {
+
         }
     }
 }
