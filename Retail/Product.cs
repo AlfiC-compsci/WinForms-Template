@@ -28,7 +28,7 @@ namespace WinForms_Template.Retail
 
     public class ProductList
     {
-        public Dictionary<string, Product> data;
+        private Dictionary<string, Product> data;
 
         public ProductList()
         {
