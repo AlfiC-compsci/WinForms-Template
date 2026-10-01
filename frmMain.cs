@@ -7,22 +7,23 @@ namespace WinForms_Template
 {
     public partial class frmMain : Form
     {
-        private object productList;
+        private ProductList productList = new ProductList();
+
         public frmMain()
         {
             InitializeComponent();
 
-            lvReceipt.View = View.Details;
-            lvReceipt.FullRowSelect = true;
-            lvReceipt.GridLines = true;
+            lvReciept.View = View.Details;
+            lvReciept.FullRowSelect = true;
+            lvReciept.GridLines = true;
 
-            lvReceipt.Columns.Add("Barcode");
-            lvReceipt.Columns.Add("Desc.");
-            lvReceipt.Columns.Add("Unit £");
-            lvReceipt.Columns.Add("Qnty");
-            lvReceipt.Columns.Add("Total");
+            lvReciept.Columns.Add("Barcode");
+            lvReciept.Columns.Add("Desc.");
+            lvReciept.Columns.Add("Unit £");
+            lvReciept.Columns.Add("Qnty");
+            lvReciept.Columns.Add("Total");
 
-            txt_hey.KeyDown += txtProductCode_KeyDown;
+            txtProduct.KeyDown += txtProductCode_KeyDown;
         }
 
 
@@ -31,50 +32,51 @@ namespace WinForms_Template
 
         }
 
-        private void txtProductCode_KeyDown(object sender, EventArgs e)
+        private void txtProductCode_KeyDown(object sender, KeyEventArgs e)
         {
             switch (e.KeyCode)
             {
                 case Keys.Return:
-                    RecordProduct(txtSomething.Text);
+                    RecordProduct(txtProduct.Text);
+                    txtProduct.Text = "";
                     break;
             }
         }
          
-        private void RecordProduct(string code)
+        private bool RecordProduct(string code)
         {
             int _quantity = 1;
             Product? _product = productList.GetProduct(code);
             if(_product == null)
             {
                 //Show Error
-                return;
+                return false;
             }
 
             ListViewItem row1 = new ListViewItem(code);
             row1.SubItems.Add(_product.Value.description);
             row1.SubItems.Add(_product.Value.unitPrice.ToString());
             row1.SubItems.Add(_quantity.ToString());
-            row1.SubItems.Add((_product.Value.unitPrice * _quantity).ToString);
+            row1.SubItems.Add((_product.Value.unitPrice * _quantity).ToString());
 
-            lvReceipt.Items.Add(row1);
+            lvReciept.Items.Add(row1);
             return true;
         }
 
         private void ChangeQuantity()
         {
             string quantityValue = txtProduct.Text;
-            if(int.TryParse(quantityValue, out quantity))
+            if(int.TryParse(quantityValue, out  int quantity))
             {
-               if (quantityValue < 1 || quantityValue > 100)
+               if (quantity < 1 || quantity > 100)
                {
                     //Show error message
                }
                else
                {
-                   ListViewItems latestItem = lvRecipt.Items[lvRecipt.Items.Count - 1];
-                   latestItem.SubItems[3].Text = quantity.ToString();
-                   latestItem.SubItems[4].Text = (float.Parse(latestItem.SubItem[2].Text) * quantity).ToString();
+                   ListViewItem latestItems = lvReceipt.Items[lvReceipt.Items.Count - 1];
+                   latestItems.SubItems[3].Text = quantity.ToString();
+                   latestItems.SubItems[4].Text = (float.Parse(latestItems.SubItems[2].Text) * quantity).ToString();
                }
             }
             txtProduct.Text = "";
@@ -82,7 +84,7 @@ namespace WinForms_Template
 
         private void button1_Click(object sender, EventArgs e)
         {
-            ChangeQuantity;
+            ChangeQuantity();
         }
     }
 }

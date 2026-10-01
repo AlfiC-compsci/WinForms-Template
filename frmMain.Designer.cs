@@ -28,16 +28,16 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.txtProduct = new System.Windows.Forms.TextBox();
             this.lvReciept = new System.Windows.Forms.ListView();
             this.SuspendLayout();
             // 
-            // textBox1
+            // txtProduct
             // 
-            this.textBox1.Location = new System.Drawing.Point(12, 12);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(100, 20);
-            this.textBox1.TabIndex = 0;
+            this.txtProduct.Location = new System.Drawing.Point(12, 12);
+            this.txtProduct.Name = "txtProduct";
+            this.txtProduct.Size = new System.Drawing.Size(100, 20);
+            this.txtProduct.TabIndex = 0;
             // 
             // lvReciept
             // 
@@ -52,7 +52,7 @@
             // 
             this.ClientSize = new System.Drawing.Size(747, 527);
             this.Controls.Add(this.lvReciept);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.txtProduct);
             this.Name = "frmMain";
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -64,7 +64,7 @@
         private System.Windows.Forms.ListView lvReceipt;
         private System.Windows.Forms.TextBox txt_hey;
         private System.Windows.Forms.ListView lvRecieve;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox txtProduct;
         private System.Windows.Forms.ListView lvReciept;
     }
 }
