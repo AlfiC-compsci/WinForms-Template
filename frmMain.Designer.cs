@@ -30,6 +30,7 @@
         {
             this.txtProduct = new System.Windows.Forms.TextBox();
             this.lvReciept = new System.Windows.Forms.ListView();
+            this.txtFileBtn1 = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // txtProduct
@@ -48,9 +49,20 @@
             this.lvReciept.TabIndex = 1;
             this.lvReciept.UseCompatibleStateImageBehavior = false;
             // 
+            // txtFileBtn1
+            // 
+            this.txtFileBtn1.Location = new System.Drawing.Point(206, 12);
+            this.txtFileBtn1.Name = "txtFileBtn1";
+            this.txtFileBtn1.Size = new System.Drawing.Size(155, 23);
+            this.txtFileBtn1.TabIndex = 2;
+            this.txtFileBtn1.Text = "Click to turn into a text file";
+            this.txtFileBtn1.UseVisualStyleBackColor = true;
+            this.txtFileBtn1.Click += new System.EventHandler(this.txtFileBtn1_Click);
+            // 
             // frmMain
             // 
             this.ClientSize = new System.Drawing.Size(747, 527);
+            this.Controls.Add(this.txtFileBtn1);
             this.Controls.Add(this.lvReciept);
             this.Controls.Add(this.txtProduct);
             this.Name = "frmMain";
@@ -66,6 +78,7 @@
         private System.Windows.Forms.ListView lvRecieve;
         private System.Windows.Forms.TextBox txtProduct;
         private System.Windows.Forms.ListView lvReciept;
+        private System.Windows.Forms.Button txtFileBtn1;
     }
 }
 

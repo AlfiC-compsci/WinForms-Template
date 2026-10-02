@@ -7,20 +7,8 @@
       "RelativeMoniker": "D:0:0:{62EDFA20-F982-42F9-A761-6B4B9CE1E553}|WinForms_Template.csproj|solutionrelative:frmmain.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{62EDFA20-F982-42F9-A761-6B4B9CE1E553}|WinForms_Template.csproj|C:\\Users\\20ACrook\\AppData\\Projects\\frmmain.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{62EDFA20-F982-42F9-A761-6B4B9CE1E553}|WinForms_Template.csproj|solutionrelative:frmmain.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{62EDFA20-F982-42F9-A761-6B4B9CE1E553}|WinForms_Template.csproj|C:\\Users\\20ACrook\\AppData\\Projects\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{62EDFA20-F982-42F9-A761-6B4B9CE1E553}|WinForms_Template.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{62EDFA20-F982-42F9-A761-6B4B9CE1E553}|WinForms_Template.csproj|C:\\Users\\20ACrook\\AppData\\Projects\\retail\\product.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{62EDFA20-F982-42F9-A761-6B4B9CE1E553}|WinForms_Template.csproj|solutionrelative:retail\\product.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{62EDFA20-F982-42F9-A761-6B4B9CE1E553}|WinForms_Template.csproj|C:\\Users\\20ACrook\\AppData\\Projects\\frmother.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{62EDFA20-F982-42F9-A761-6B4B9CE1E553}|WinForms_Template.csproj|solutionrelative:frmother.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{62EDFA20-F982-42F9-A761-6B4B9CE1E553}|WinForms_Template.csproj|C:\\Users\\20ACrook\\AppData\\Projects\\frmother.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
@@ -28,6 +16,18 @@
     },
     {
       "AbsoluteMoniker": "D:0:0:{00000000-0000-0000-0000-000000000000}|\u003CSolution\u003E|WinForms_Template||{04B8AB82-A572-4FEF-95CE-5222444B6B64}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{62EDFA20-F982-42F9-A761-6B4B9CE1E553}|WinForms_Template.csproj|C:\\Users\\20ACrook\\AppData\\Projects\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{62EDFA20-F982-42F9-A761-6B4B9CE1E553}|WinForms_Template.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{62EDFA20-F982-42F9-A761-6B4B9CE1E553}|WinForms_Template.csproj|C:\\Users\\20ACrook\\AppData\\Projects\\frmmain.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{62EDFA20-F982-42F9-A761-6B4B9CE1E553}|WinForms_Template.csproj|solutionrelative:frmmain.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{62EDFA20-F982-42F9-A761-6B4B9CE1E553}|WinForms_Template.csproj|C:\\Users\\20ACrook\\AppData\\Projects\\frmother.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{62EDFA20-F982-42F9-A761-6B4B9CE1E553}|WinForms_Template.csproj|solutionrelative:frmother.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{62EDFA20-F982-42F9-A761-6B4B9CE1E553}|WinForms_Template.csproj|C:\\Users\\20ACrook\\AppData\\Projects\\app.config||{FA3CD31E-987B-443A-9B81-186104E8DAC1}",
@@ -44,11 +44,24 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 2,
           "Children": [
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{cce594b6-0c39-4442-ba28-10c64ac7e89f}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Product.cs",
+              "DocumentMoniker": "C:\\Users\\20ACrook\\AppData\\Projects\\Retail\\Product.cs",
+              "RelativeDocumentMoniker": "Retail\\Product.cs",
+              "ToolTip": "C:\\Users\\20ACrook\\AppData\\Projects\\Retail\\Product.cs",
+              "RelativeToolTip": "Retail\\Product.cs",
+              "ViewState": "AgIAABMAAAAAAAAAAAAgwCUAAAAgAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-09-23T14:11:55.305Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
@@ -58,27 +71,14 @@
               "RelativeDocumentMoniker": "frmMain.cs",
               "ToolTip": "C:\\Users\\20ACrook\\AppData\\Projects\\frmMain.cs",
               "RelativeToolTip": "frmMain.cs",
-              "ViewState": "AgIAACIAAAAAAAAAAIA3wDoAAAA0AAAAAAAAAA==",
+              "ViewState": "AgIAAGQAAAAAAAAAAAAowIAAAAAwAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-09-23T14:11:42.782Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "Product.cs",
-              "DocumentMoniker": "C:\\Users\\20ACrook\\AppData\\Projects\\Retail\\Product.cs",
-              "RelativeDocumentMoniker": "Retail\\Product.cs",
-              "ToolTip": "C:\\Users\\20ACrook\\AppData\\Projects\\Retail\\Product.cs",
-              "RelativeToolTip": "Retail\\Product.cs",
-              "ViewState": "AgIAABMAAAAAAAAAAAAgwCYAAAAgAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-09-23T14:11:55.305Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 5,
               "Title": "frmMain.cs [Design]",
               "DocumentMoniker": "C:\\Users\\20ACrook\\AppData\\Projects\\frmMain.cs",
               "RelativeDocumentMoniker": "frmMain.cs",
@@ -90,7 +90,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 4,
               "Title": "Program.cs",
               "DocumentMoniker": "C:\\Users\\20ACrook\\AppData\\Projects\\Program.cs",
               "RelativeDocumentMoniker": "Program.cs",
@@ -103,7 +103,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 3,
               "Title": "WinForms_Template",
               "DocumentMoniker": "C:\\Users\\20ACrook\\AppData\\Projects\\WinForms_Template.csproj",
               "RelativeDocumentMoniker": "WinForms_Template.csproj",
@@ -115,7 +115,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 2,
               "Title": "frmOther.cs [Design]",
               "DocumentMoniker": "C:\\Users\\20ACrook\\AppData\\Projects\\frmOther.cs",
               "RelativeDocumentMoniker": "frmOther.cs",
@@ -127,7 +127,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 6,
               "Title": "frmOther.cs",
               "DocumentMoniker": "C:\\Users\\20ACrook\\AppData\\Projects\\frmOther.cs",
               "RelativeDocumentMoniker": "frmOther.cs",
@@ -148,7 +148,8 @@
               "RelativeToolTip": "App.config",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000601|",
-              "WhenOpened": "2026-09-23T14:30:17.759Z"
+              "WhenOpened": "2026-09-23T14:30:17.759Z",
+              "EditorCaption": ""
             }
           ]
         }

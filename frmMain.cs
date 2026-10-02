@@ -1,5 +1,8 @@
 ﻿using System;
+using System.Data.Common;
+using System.IO;
 using System.Runtime.CompilerServices;
+using System.Text;
 using System.Windows.Forms;
 using WinForms_Template.Retail;
 
@@ -8,6 +11,7 @@ namespace WinForms_Template
     public partial class frmMain : Form
     {
         private ProductList productList = new ProductList();
+        private static string dirParameter = AppDomain.CurrentDomain.BaseDirectory + @"\ReceiptFile.txt";
 
         public frmMain()
         {
@@ -85,6 +89,53 @@ namespace WinForms_Template
         private void button1_Click(object sender, EventArgs e)
         {
             ChangeQuantity();
+        }
+
+        private void txtFileBtn1_Click(object sender, EventArgs e)
+        {
+            SaveEvent();
+        }
+
+        private void SaveEvent()
+        {
+            DialogResult result;
+            result = MessageBox.Show("Do you want to save file?", "Confirm", MessageBoxButtons.YesNo, MessageBoxIcon.Question); if (result == DialogResult.No)
+            {
+                return;
+            }
+            if (result == DialogResult.Yes)
+            {
+                try
+                {
+                    if (lvReciept.Text != null)
+                    {
+                        FileStream fParameter = new FileStream(dirParameter, FileMode.Create, FileAccess.Write);
+                        StreamWriter m_WriterParameter = new StreamWriter(fParameter);
+                        m_WriterParameter.BaseStream.Seek(0, SeekOrigin.End);
+                        using (m_WriterParameter)
+                        {
+                            StringBuilder sb;
+                            foreach (ListView item in lvReciept.Items)
+                            {
+                                sb = new StringBuilder();
+
+                                foreach (ListViewItem.ListViewSubItem listViewSubitem in lvReciept.Items)
+                                {
+                                    sb.Append(string.Format("{0}\t", listViewSubitem.Text));
+                                }
+                            }
+                        }
+                        m_WriterParameter.Write(lvReciept.Text);
+                        m_WriterParameter.Write(DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss"));
+                        m_WriterParameter.Flush();
+                        m_WriterParameter.Close();
+                    }
+                }
+                catch (Exception err)
+                {
+                    MessageBox.Show(err.ToString());
+                }
+            }
         }
     }
 }
