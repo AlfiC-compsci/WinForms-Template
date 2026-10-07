@@ -46,12 +46,12 @@ namespace WinForms_Template
                     break;
             }
         }
-         
+
         private bool RecordProduct(string code)
         {
             int _quantity = 1;
             Product? _product = productList.GetProduct(code);
-            if(_product == null)
+            if (_product == null)
             {
                 //Show Error
                 return false;
@@ -70,18 +70,18 @@ namespace WinForms_Template
         private void ChangeQuantity()
         {
             string quantityValue = txtProduct.Text;
-            if(int.TryParse(quantityValue, out  int quantity))
+            if (int.TryParse(quantityValue, out int quantity))
             {
-               if (quantity < 1 || quantity > 100)
-               {
+                if (quantity < 1 || quantity > 100)
+                {
                     //Show error message
-               }
-               else
-               {
-                   ListViewItem latestItems = lvReceipt.Items[lvReceipt.Items.Count - 1];
-                   latestItems.SubItems[3].Text = quantity.ToString();
-                   latestItems.SubItems[4].Text = (float.Parse(latestItems.SubItems[2].Text) * quantity).ToString();
-               }
+                }
+                else
+                {
+                    ListViewItem latestItems = lvReceipt.Items[lvReceipt.Items.Count - 1];
+                    latestItems.SubItems[3].Text = quantity.ToString();
+                    latestItems.SubItems[4].Text = (float.Parse(latestItems.SubItems[2].Text) * quantity).ToString();
+                }
             }
             txtProduct.Text = "";
         }
@@ -112,19 +112,6 @@ namespace WinForms_Template
                         FileStream fParameter = new FileStream(dirParameter, FileMode.Create, FileAccess.Write);
                         StreamWriter m_WriterParameter = new StreamWriter(fParameter);
                         m_WriterParameter.BaseStream.Seek(0, SeekOrigin.End);
-                        using (m_WriterParameter)
-                        {
-                            StringBuilder sb;
-                            foreach (ListView item in lvReciept.Items)
-                            {
-                                sb = new StringBuilder();
-
-                                foreach (ListViewItem.ListViewSubItem listViewSubitem in lvReciept.Items)
-                                {
-                                    sb.Append(string.Format("{0}\t", listViewSubitem.Text));
-                                }
-                            }
-                        }
                         m_WriterParameter.Write(lvReciept.Text);
                         m_WriterParameter.Write(DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss"));
                         m_WriterParameter.Flush();
@@ -135,7 +122,40 @@ namespace WinForms_Template
                 {
                     MessageBox.Show(err.ToString());
                 }
+
+            }
+
+        private void savelog_Click(object sender, EventArgs e)
+        {
+            {
+                if (lvReciept.ShowDialog() == DialogResult.OK)
+                {
+                    // create a writer and open the file
+                    TextWriter tw = new StreamWriter(lvReciept.SelectedPath + "logfile1.txt");
+                    // write a line of text to the file
+                    tw.WriteLine(lvReciept.Text);
+                    // close the stream
+                    tw.Close();
+                    MessageBox.Show("Saved to " + lvReciept.SelectedPath + "\\logfile.txt", "Saved Log File", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
             }
         }
+
+
+        // using (m_WriterParameter)
+        //{
+        //StringBuilder sb;
+        //foreach (ListView item in lvReciept.Items)
+        //{
+        //    sb = new StringBuilder();
+        //
+        //    foreach (ListViewItem.ListViewSubItem listViewSubitem in lvReciept.Items)
+        //    {
+        //        sb.Append(string.Format("{0}\t", listViewSubitem.Text));
+        //    }
+        //}
+        //}
     }
-}
+
+}  
+
