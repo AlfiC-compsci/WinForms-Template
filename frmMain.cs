@@ -11,7 +11,7 @@ namespace WinForms_Template
     public partial class frmMain : Form
     {
         private ProductList productList = new ProductList();
-        private static string dirParameter = AppDomain.CurrentDomain.BaseDirectory + @"\ReceiptFile.txt";
+        private static string dirParameter = AppDomain.CurrentDomain.BaseDirectory + @"\ReceiptFile.csv";
 
         public frmMain()
         {
@@ -112,8 +112,21 @@ namespace WinForms_Template
                         FileStream fParameter = new FileStream(dirParameter, FileMode.Create, FileAccess.Write);
                         StreamWriter m_WriterParameter = new StreamWriter(fParameter);
                         m_WriterParameter.BaseStream.Seek(0, SeekOrigin.End);
+                        foreach (ListViewItem Items in lvReciept.Items)
+                        {
+                            for (int i = 0; i < Items.SubItems.Count; i++)
+                            {
+                                m_WriterParameter.Write((Items.SubItems[i].Text));
+                                if (i < Items.SubItems.Count - 1)
+                                {
+                                    m_WriterParameter.Write(",");
+                                }
+                            }
+                            m_WriterParameter.Write("\n");
+                        }
+                        m_WriterParameter.Write("File writes Operation starts: ");
+                        m_WriterParameter.Write("{0} {1}", DateTime.Now.ToLongTimeString(), DateTime.Now.ToLongDateString());
                         m_WriterParameter.Write(lvReciept.Text);
-                        m_WriterParameter.Write(DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss"));
                         m_WriterParameter.Flush();
                         m_WriterParameter.Close();
                     }
@@ -123,21 +136,6 @@ namespace WinForms_Template
                     MessageBox.Show(err.ToString());
                 }
 
-            }
-
-        private void savelog_Click(object sender, EventArgs e)
-        {
-            {
-                if (lvReciept.ShowDialog() == DialogResult.OK)
-                {
-                    // create a writer and open the file
-                    TextWriter tw = new StreamWriter(lvReciept.SelectedPath + "logfile1.txt");
-                    // write a line of text to the file
-                    tw.WriteLine(lvReciept.Text);
-                    // close the stream
-                    tw.Close();
-                    MessageBox.Show("Saved to " + lvReciept.SelectedPath + "\\logfile.txt", "Saved Log File", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                }
             }
         }
 
